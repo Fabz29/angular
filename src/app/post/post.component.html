@@ -1,0 +1,14 @@
+<div class="list-group-item flex-column align-items-start" [ngClass]="{'list-group-item-success' : post.numberLike > post.numberDislike, 'list-group-item-danger' : post.numberLike < post.numberDislike}">
+  <div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">{{ post.title }}</h5>
+    <small>{{ post.createdAt|date: 'short' }}</small>
+  </div>
+  <p class="mb-1">{{ post.content }}</p>
+  <button (click)="like()" class="btn btn-success m-r-10">
+    Love it!
+  </button>
+  <button (click)="disLike()" class="btn btn-danger">
+    Don't love it!
+  </button>
+</div>
+
