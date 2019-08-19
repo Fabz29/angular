@@ -1,5 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Post} from '../post';
+import {PostsService} from '../services/posts.service';
 
 @Component({
   selector: 'app-post',
@@ -10,7 +11,7 @@ export class PostComponent implements OnInit {
 
   @Input() post: Post;
 
-  constructor() {
+  constructor(private postService: PostsService) {
   }
 
   ngOnInit() {
@@ -22,5 +23,9 @@ export class PostComponent implements OnInit {
 
   disLike() {
     this.post.addDislike();
+  }
+
+  onRemovePost(post: Post) {
+    this.postService.removePost(post);
   }
 }
