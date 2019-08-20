@@ -4,13 +4,13 @@
     <small>{{ post.createdAt|date: 'short' }}</small>
   </div>
   <p class="mb-1">{{ post.content }}</p>
-  <button (click)="like()" class="btn btn-success m-r-10">
+  <button (click)="like()" class="btn btn-success mr-1">
     Love it!
   </button>
   <button (click)="disLike()" class="btn btn-danger">
     Don't love it!
   </button>
-  <button (click)="onRemovePost(post)" class="btn btn-danger">
+  <button (click)="onRemovePost(post)" class="btn btn-danger float-right">
     Supprimer
   </button>
 </div>
