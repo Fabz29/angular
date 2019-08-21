@@ -1,9 +1,10 @@
 export class Post {
-  private title: string;
-  private content: string;
-  private numberLike: number;
-  private numberDislike: number;
-  private createdAt: Date;
+  id: number;
+  title: string;
+  content: string;
+  numberLike: number;
+  numberDislike: number;
+  createdAt: Date;
 
   constructor(title, content) {
     this.title = title;
@@ -11,14 +12,6 @@ export class Post {
     this.numberLike = 0;
     this.numberDislike = 0;
     this.createdAt = new Date();
-  }
-
-  addLike() {
-    this.numberLike++;
-  }
-
-  addDislike() {
-    this.numberDislike++;
   }
 }
 

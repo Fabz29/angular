@@ -17,12 +17,12 @@ export class PostComponent implements OnInit {
   ngOnInit() {
   }
 
-  like() {
-    this.post.addLike();
+  onLike(post: Post) {
+    this.postService.addLike(post);
   }
 
-  disLike() {
-    this.post.addDislike();
+  onDisLike(post: Post) {
+    this.postService.addDislike(post);
   }
 
   onRemovePost(post: Post) {
